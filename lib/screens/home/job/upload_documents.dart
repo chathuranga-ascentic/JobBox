@@ -28,7 +28,8 @@ class UploadDocuments extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  applyToJobHeader(context, jobName, 1, "Uploading Documents", Icons.close),
+                  applyToJobHeader(
+                      context, jobName, 1, "Uploading Documents", Icons.close),
                   const SizedBox(height: 20.0),
                   userUploads(
                       "Resume",
@@ -79,22 +80,26 @@ Widget userUploads(String heading, String subHeading, String documentName,
             crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-                Text(
-                  heading,
-                  style: const TextStyle(
-                      fontSize: 22.0,
-                      fontWeight: FontWeight.w600,
-                      color: taupeColor),
-                ),
-                Text(
-                  subHeading,
-                  style: const TextStyle(
-                      fontSize: 14.0,
-                      fontWeight: FontWeight.w500,
-                      color: nobelColor),
-                ),
-              ]),
+              Expanded(
+                child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        heading,
+                        style: const TextStyle(
+                            fontSize: 22.0,
+                            fontWeight: FontWeight.w600,
+                            color: taupeColor),
+                      ),
+                      Text(
+                        subHeading,
+                        style: const TextStyle(
+                            fontSize: 14.0,
+                            fontWeight: FontWeight.w500,
+                            color: nobelColor),
+                      ),
+                    ]),
+              ),
               const Icon(
                 Icons.add,
                 size: 30.0,

@@ -60,32 +60,28 @@ class SignupForm extends StatelessWidget {
         child: Column(
           children: [
             Expanded(
-              flex: 2,
-              child: Container(
-                width: 100,
-                height: 100,
-                decoration: BoxDecoration(
-                  border: Border.all(width: 1),
-                  shape: BoxShape.circle,
-                  color: soapStoneColor,
-                ),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: const <Widget>[
-                    Text('Add Photo',
-                        style: TextStyle(
-                            fontSize: 15,
-                            fontWeight: FontWeight.w400,
-                            color: taupeColor)),
-                  ],
-                ),
-              ),
-            ),
-            Expanded(
-              flex: 8,
               child: Column(
                 children: [
+                  Container(
+                    width: 100,
+                    height: 100,
+                    decoration: BoxDecoration(
+                      border: Border.all(width: 1),
+                      shape: BoxShape.circle,
+                      color: soapStoneColor,
+                    ),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: const <Widget>[
+                        Text('Add Photo',
+                            style: TextStyle(
+                                fontSize: 15,
+                                fontWeight: FontWeight.w400,
+                                color: taupeColor)),
+                      ],
+                    ),
+                  ),
                   const SizedBox(height: 18),
                   _EmailInput(),
                   const SizedBox(height: 8),
@@ -99,52 +95,46 @@ class SignupForm extends StatelessWidget {
                 ],
               ),
             ),
-            Expanded(
-              flex: 1,
-              child: Align(
-                alignment: Alignment.bottomCenter,
-                child: Column(
-                  children: <Widget>[
-                    const Text("By creating an account you agree to Koko's",
+            Column(
+              children: <Widget>[
+                const Text("By creating an account you agree to Koko's",
+                    style: TextStyle(
+                        fontSize: 14,
+                        fontWeight: FontWeight.w400,
+                        color: taupeColor)),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    TextButton(
+                        child: const Text(
+                          'Terms of Use',
+                          style: TextStyle(
+                              fontSize: 14, color: atomicTangerinColor),
+                        ),
+                        style: TextButton.styleFrom(
+                          minimumSize: Size.zero,
+                        ),
+                        onPressed: () => {}),
+                    const Text("and",
                         style: TextStyle(
                             fontSize: 14,
                             fontWeight: FontWeight.w400,
                             color: taupeColor)),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        TextButton(
-                            child: const Text(
-                              'Terms of Use',
-                              style: TextStyle(
-                                  fontSize: 14, color: atomicTangerinColor),
-                            ),
-                            style: TextButton.styleFrom(
-                              minimumSize: Size.zero,
-                            ),
-                            onPressed: () => {}),
-                        const Text("and",
-                            style: TextStyle(
-                                fontSize: 14,
-                                fontWeight: FontWeight.w400,
-                                color: taupeColor)),
-                        TextButton(
-                            style: TextButton.styleFrom(
-                              minimumSize: Size.zero,
-                            ),
-                            child: const Text(
-                              'Privacy Policy',
-                              style: TextStyle(
-                                  fontSize: 14, color: atomicTangerinColor),
-                            ),
-                            onPressed: () => {}),
-                      ],
-                    )
+                    TextButton(
+                        style: TextButton.styleFrom(
+                          minimumSize: Size.zero,
+                        ),
+                        child: const Text(
+                          'Privacy Policy',
+                          style: TextStyle(
+                              fontSize: 14, color: atomicTangerinColor),
+                        ),
+                        onPressed: () => {}),
                   ],
-                  mainAxisAlignment: MainAxisAlignment.end,
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                ),
-              ),
+                )
+              ],
+              mainAxisAlignment: MainAxisAlignment.end,
+              crossAxisAlignment: CrossAxisAlignment.center,
             ),
           ],
         ),
