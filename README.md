@@ -14,4 +14,4 @@ password: 12345678
 ```
 ## Screen Shots
 
-![My Image](screenShots/img_sh1.jpg)
+![My Image](../screenShots/img_sh1.jpg)
