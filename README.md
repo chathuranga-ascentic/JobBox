@@ -12,3 +12,6 @@ This project is a starting point for a Flutter application.
 Email: testjobbox@gmail.com
 password: 12345678
 ```
+## Screen Shots
+
+![My Image](screenShots/img_sh1.jpg)
